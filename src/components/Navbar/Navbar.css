@@ -1,0 +1,12 @@
+#hopLogo {
+  width: 100px;
+  height: 82px;
+  padding-left: 15px;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #264653;
+}
