@@ -1,6 +1,11 @@
 #menu {
   font-size: 6vh;
-  color: darkred;
+  color: white;
+}
+
+#shopping {
+  color: white;
+  font-size: 6vh;
 }
 
 #hopLogo {
@@ -10,16 +15,16 @@
 }
 
 .nav {
-  background-color: #f4a261;
+  background-color: #264653;
   display: flex;
 }
 
 body {
-  background-color: #264653;
+  background-color: #fff;
 }
 
 p {
   margin: 5px;
   padding: 5px;
-  color: white;
+  color: black;
 }
