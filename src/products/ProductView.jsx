@@ -1,89 +1,51 @@
-import React, { useState, useEffect } from "react";
+import React from 'react';
+import {Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle, Button, Row, Col} from 'reactstrap';
+import APIURL from './../helpers/Environment';
+import '../App.css';
+
+
 
 
 const ProductView = (props) => {
-  const deleteProduct = (product) => {
-    fetch(`${APIURL}/product/delete/${product.id}`, {
-      method: "DELETE",
-      headers: new Headers({
-        "Content-Type": "application/json",
-        Authorization: props.token,
-      }),
-    }).then(() => {
-      props.getListOfProducts();
-    });
-  };
+    const deleteProduct = (product) => {
+        fetch(`${APIURL}/food/${product.id}`, {
+            method: 'DELETE', 
+            headers: new Headers({
+                'Content-Type': 'application/json',
+                'Authorization': props.token
+            })
+        }).then(() => props.fetchProducts())
+    }
 
-  function changeBtn(e) {
-    // e.target.style.fontSize = 'larger';
-    e.target.style.color = '#f7e1d7';
-    e.target.style.fontWeight = 'bold';
-  }
+    const ProductMapper = () => {
+        return props.product.map((product, index) => {
+            return (
+                <Row>
+                    <Col sm="12">
+                <Card id="card" key={index} body outline color="secondary">
+                    <CardTitle id="cardTitle">{product.nameOfProduct}</CardTitle>
+                    <CardImg id="resultimage" src={food.image} alt="Card image cap" />
+                    <CardBody>
+                     <div id="cardbuttons">
+                        <Button onClick={() => {props.editUpdateFood(product); props.updateOn()}}>Update My Products</Button>
+                        <Button id="deleteMe" onClick={() => {deleteProduct(product)}}>Delete My Product</Button>
+                        </div>
+                    </CardBody>
+                </Card>
+                </Col>
+                </Row>
+            )
+        })
+    }
 
-  function resetBtn(e) {
-    // e.target.style.fontSize = 'initial';
-    // e.target.style.fontStyle = 'initial';
-    e.target.style.fontWeight = 'initial';
-    e.target.style.color = 'white';
-  }
-
-  const productListMapper = () => {
-    return props.productList.map((product, index) => {
-      return (
-        <>
-        <tr key={index} >
-          <td > 
-            <MyPageCards productItem={product} />
-            <div class="flexbox-container">
-                <div class="flexbox-item-1">
-                  <Button
-                    style={{ backgroundColor: "#b0c4b1", marginRight: 5, width: 100 }}
-                    onMouseOver={changeBtn} onMouseLeave={resetBtn}
-                    onClick={() => {
-                      props.editUpdateProduct(product);
-                      props.updateOn();
-                    }}
-                  >
-                    Edit
-                  </Button>{" "}
-                </div>
-                <div class="flexbox-item-2">
-                  <Button
-                    style={{ backgroundColor: "#4a5759", marginLeft: 5, width: 100}}
-                    onMouseOver={changeBtn} onMouseLeave={resetBtn}
-                    onClick={() => {
-                      deleteProduct(product);
-                    }}
-                  >
-                    Delete
-                  </Button>
-                </div>
+    return(
+        <div>
+            <h3 id="resultsheading">Artisnal Baked Goods, made from locally sourced ingredients</h3>
+            <div>
+                {FoodMapper()}
             </div>
-          </td>
-        </tr>
-        </>
-      );
-    });
-  };
-
-  return (
-    <>
-      <h3 id="myShopHeader">my shop</h3>
-      <br />
-      <Table>
-        <tbody>
-          {props.productList.length === 0 ? (
-            <h4>
-              You have no product for sale yet.. Use the bar on the left to list
-              some
-            </h4>
-          ) : (
-            productListMapper()
-          )}
-        </tbody>
-      </Table>
-    </>
-  );
-};
+        </div>
+    )
+}
 
 export default ProductView;
