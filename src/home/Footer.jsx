@@ -1,6 +1,7 @@
 import "./App.css";
 import React, { useState, useEffect } from "react";
 import Routes from "./home/Routes";
+import Footer from "./home/Footer";
 import { BrowserRouter as Router } from "react-router-dom";
 
 function App() {
@@ -10,10 +11,10 @@ function App() {
         <Router>
           <Routes />
         </Router>
-           </div>
+        <Footer />
+      </div>
     </div>
   );
 }
 
 export default App;
-
