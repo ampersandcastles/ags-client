@@ -3,7 +3,7 @@ import hopLogo from "../../assets/hop-no-text.png";
 import MenuIcon from "@material-ui/icons/Menu";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 import "./Navbar.css";
-import Center from "react-center";
+
 import { Button } from "@material-ui/core";
 
 const Navbar = (props) => {

@@ -10,7 +10,6 @@ import {
   CardBody,
   CardTitle,
   CardSubtitle,
-  Button,
 } from "reactstrap";
 
 const Items = (props) => {
