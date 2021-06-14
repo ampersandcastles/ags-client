@@ -1,5 +1,15 @@
-import React, { useEffect } from 'react';
-import Auth from '../auth/Auth';
+import React from 'react';
+import './logout.css';
+import logoutPic from '../assets/logoutPic.png';
 
- 
-export default LogOut;
+const Logout = (props) => {
+    return(
+        <div>
+            <img id="logout" 
+                src={logoutPic} 
+                alt="Power Button" 
+                onClick={props.clearSession} />
+        </div>
+    )
+}
+export default Logout
