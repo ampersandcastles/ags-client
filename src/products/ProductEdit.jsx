@@ -12,7 +12,7 @@ const FoodEdit = (props) => {
         event.preventDefault(e);
         fetch(`${APIURL}/product/${props.productToUpdate.id}`, {
             method: 'PUT',
-            body: JSON.stringify({nameOfProduct: editName, image: editIma, editLin, category: editCat, descriptionOfFood: editDesc}),
+            body: JSON.stringify({nameOfProduct: editName, image: editIma, editLin, category: editCat, descriptionOfProduct: editDesc}),
             headers: new Headers({
                 'Content-Type': 'application/json',
                 'Authorization': props.token
@@ -50,11 +50,11 @@ const FoodEdit = (props) => {
                         <Input name="descriptionOfProduct" value={editDesc} onChange={(e) => setEditDesc(e.target.value)} />
                     </FormGroup>
                    
-                    <Button type="submit">Update Food</Button>
+                    <Button type="submit">Update Product</Button>
                 </Form>
             </ModalBody>
         </Modal>
     )
 }
 
-export default FoodEdit;
+export default ProductEdit;
