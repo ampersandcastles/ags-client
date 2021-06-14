@@ -34,7 +34,7 @@ const ProductCreate = (props) => {
             setImage('');
             setCategory('');
             setDescriptionOfProduct('');
-            props.fetchProduct();//create fetchProduct in the index
+            props.fetchProduct();
             props.createOff();
         })
     }

@@ -24,10 +24,10 @@ const ProductView = (props) => {
                     <Col sm="12">
                 <Card id="card" key={index} body outline color="secondary">
                     <CardTitle id="cardTitle">{product.nameOfProduct}</CardTitle>
-                    <CardImg id="resultimage" src={food.image} alt="Card image cap" />
+                    <CardImg id="resultimage" src={product.image} alt="Card image cap" />
                     <CardBody>
                      <div id="cardbuttons">
-                        <Button onClick={() => {props.editUpdateFood(product); props.updateOn()}}>Update My Products</Button>
+                        <Button onClick={() => {props.editUpdateProduct(product); props.updateOn()}}>Update My Products</Button>
                         <Button id="deleteMe" onClick={() => {deleteProduct(product)}}>Delete My Product</Button>
                         </div>
                     </CardBody>
