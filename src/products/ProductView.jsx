@@ -27,7 +27,7 @@ const ProductView = (props) => {
                     <CardImg id="resultimage" src={food.image} alt="Card image cap" />
                     <CardBody>
                      <div id="cardbuttons">
-                        <Button onClick={() => {props.editUpdateFood(product); props.updateOn()}}>Update My Products</Button>
+                        <Button onClick={() => {props.editUpdateProduct(product); props.updateOn()}}>Update My Products</Button>
                         <Button id="deleteMe" onClick={() => {deleteProduct(product)}}>Delete My Product</Button>
                         </div>
                     </CardBody>
@@ -42,7 +42,7 @@ const ProductView = (props) => {
         <div>
             <h3 id="resultsheading">Artisnal Baked Goods, made from locally sourced ingredients</h3>
             <div>
-                {FoodMapper()}
+                {ProductMapper()}
             </div>
         </div>
     )
