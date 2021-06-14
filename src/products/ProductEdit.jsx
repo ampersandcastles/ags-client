@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {Modal, ModalHeader,ModalBody, Label, Input, Button, Form, FormGroup} from 'reactstrap';
 import APIURL from './../helpers/Environment';
 
-const FoodEdit = (props) => {
+const ProductEdit = (props) => {
     const [editName, setEditName] = useState(props.productToUpdate.nameOfProduct);
     const [editIma, setEditIma] = useState(props.productToUpdate.image);
        const [editCat, setEditCat] = useState(props.productToUpdate.category);
