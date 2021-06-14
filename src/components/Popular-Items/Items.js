@@ -19,22 +19,9 @@ const Items = (props) => {
       <Container id="items">
         <Card id="card">
           <CardImg top src={toast} alt="Card image cap" />
-          <CardBody class="cardbody">
+          <CardBody>
             <CardTitle tag="h2">Toast Sandwich</CardTitle>
-            <CardSubtitle tag="h4" className="mb-2 text-muted">
-              Absolutely disgusting
-            </CardSubtitle>
-            <CardText>
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </CardText>
-          </CardBody>
-        </Card>
-        <Card id="card">
-          <CardImg top src={toast} alt="Card image cap" />
-          <CardBody class="cardbody">
-            <CardTitle tag="h2">Toast Sandwich</CardTitle>
-            <CardSubtitle tag="h4" className="mb-2 text-muted">
+            <CardSubtitle tag="h4" className="mb-1 text-muted">
               Absolutely disgusting
             </CardSubtitle>
             <CardText>
@@ -47,7 +34,20 @@ const Items = (props) => {
           <CardImg top src={toast} alt="Card image cap" />
           <CardBody>
             <CardTitle tag="h2">Toast Sandwich</CardTitle>
-            <CardSubtitle tag="h4" className="mb-2 text-muted">
+            <CardSubtitle tag="h4" className="mb-1 text-muted">
+              Absolutely disgusting
+            </CardSubtitle>
+            <CardText>
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </CardText>
+          </CardBody>
+        </Card>
+        <Card id="card">
+          <CardImg top src={toast} alt="Card image cap" />
+          <CardBody>
+            <CardTitle tag="h2">Toast Sandwich</CardTitle>
+            <CardSubtitle tag="h4" className="mb-1 text-muted">
               Absolutely disgusting
             </CardSubtitle>
             <CardText>
