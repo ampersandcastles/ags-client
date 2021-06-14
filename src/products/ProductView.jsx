@@ -40,7 +40,7 @@ const ProductView = (props) => {
         <div>
             <h3 id="resultsheading">Artisnal Baked Goods, made from locally sourced ingredients</h3>
             <div>
-                {FoodMapper()}
+                {ProductMapper()}
             </div>
         </div>
     )
