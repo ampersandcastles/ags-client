@@ -4,8 +4,6 @@ import APIURL from './../helpers/Environment';
 import '../App.css';
 
 
-
-
 const ProductView = (props) => {
     const deleteProduct = (product) => {
         fetch(`${APIURL}/food/${product.id}`, {
