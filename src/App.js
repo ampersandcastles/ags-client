@@ -4,15 +4,19 @@ import "./App.css";
 // import Body from "./components/Body/Body";
 // import Navbar from "./components/Navbar/Navbar";
 // import Items from "./components/Popular-Items/Items";
-import Register from "./components/Register/Register";
+// import Login from "./components/Login/Login";
+// import Register from "./components/Register/Register";
+import Menu from "./components/Menu/Menu";
 
 function App() {
   return (
     <div className="main">
       {/* <Navbar />
       <Body />
-      <Items /> */}
-      <Register />
+      <Items /> 
+      <Login /> 
+      <Register />*/}
+      <Menu />
     </div>
   );
 }

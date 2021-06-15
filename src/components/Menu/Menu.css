@@ -1,0 +1,19 @@
+#items {
+  width: 80%;
+  margin-top: 5vh;
+  background-color: white;
+  display: flex;
+  margin-bottom: 2%;
+}
+
+#card {
+  display: flex;
+  flex-flow: column;
+  padding: 10px 10px;
+}
+
+.card-body {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
