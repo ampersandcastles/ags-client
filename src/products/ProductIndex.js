@@ -1,16 +1,16 @@
 import React, {useState, useEffect} from 'react';
-import {Container, Row, Col, Button, Form, FormGroup, Label, Input} from 'reactstrap';
-import ProductView from './ProductView;
+import {Container, Row, Col, Button} from 'reactstrap';
+import ProductView from './ProductView';
 import ProductEdit from './ProductEdit';
 import ProductCreate from './ProductCreate';
 import APIURL from './../helpers/Environment';
 
 const ProductIndex = (props) => {
-    const [products, setProducts] = useState([]);
+    const [products, setProduct] = useState([]);
     const [updateActive, setUpdateActive] = useState(false);
-    const [productToUpdate, setProductToUpdate] = useState({}); 
+    const [productEdit, setProductToUpdate] = useState({}); 
     const [createActive, setCreateActive] = useState(false);
-    const [productToCreate, setProductToCreate] = useState({});
+    const [ProductCreate, ProductCreate] = useState({});
 
     const editUpdateProduct = (product) => {
         setProductToUpdate(product);
@@ -29,26 +29,31 @@ const ProductIndex = (props) => {
         setCreateActive(false);
     }
              
-    const fetchProducts = () => {
-        fetch(`${APIURL}/product`, {
+    const fetchProduct = () => {
+        fetch(baseURL, {
             method: 'GET',
             headers: new Headers({
                 'Content-Type': 'application/json',
                 'Authorization': props.token
-            }
-            )
-        }).then((res) => res.json())
-        .then((logData) => {
-            setProduct(logData.logs);
-            console.log(logData);
+            })
         })
-    };
-        
-    useEffect(() => {
-        fetchProducts();
-    }, [])
+            .then((res) => res.json())
+            .then((productData) => {
+                setProducts(productData)
+                console.log(products, productData);
+            })
+    }
 
-
+    const viewProduct = (product) => {
+        setProductToView(product);
+      
+    }
+    const viewOn = () => {
+    setViewActive(true)
+}
+const viewOff = () => {
+    setViewActive(false)
+}
 
     return(
         <Container id="container">
@@ -67,7 +72,7 @@ const ProductIndex = (props) => {
                 {updateActive ? <ProductsEdit productsToUpdate={productToUpdate}
                 updateOff={updateOff} token={props.token} fetchProducts={fetchProducts}/> : <></>}
                 <Col md="3">
-                {/* <Form style={{marginTop: '225px'}}>
+                <Form style={{marginTop: '225px'}}>
                     <FormGroup style={{marginTop: '75px'}}>
                         <Label htmlFor="category" />
                         <Input type="select" name="category" id="exampleSelect"  >
@@ -79,7 +84,7 @@ const ProductIndex = (props) => {
                          </Input>
                          <Button>Search by Category</Button>
                     </FormGroup>
-                    </Form> */}
+                    </Form>
                 </Col>
             </Row>
         </Container>

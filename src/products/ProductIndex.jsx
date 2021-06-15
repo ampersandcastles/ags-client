@@ -3,7 +3,12 @@ import React, {useState, useEffect} from 'react';
 // import ProductCreate from './ProductCreate';
 import ProductIndex from './ProductIndex';
 import APIURL from '../helpers/Environment';
+
+
+
+
 const ProductIndex = (props) => {
+
  var [products, setProducts] = useState([]);
     var [updateActive, setUpdateActive] = useState(false);
   var [productToUpdate, setProductToUpdate] = useState({}); 

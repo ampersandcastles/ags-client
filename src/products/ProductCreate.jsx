@@ -9,11 +9,13 @@ const ProductCreate = (props) => {
     const [descriptionOfProduct, setDescriptionOfProduct] = useState('');
  
 
-    const handleSubmit = (e) => {
+    const postProduct = (e) => {
         e.preventDefault();
 
+    let url =http://
+
         const logObj = {
-            nameOfProduct: nameOfProduct,
+            nameOfProduct: setnameOfProduct,
             image: image,
             category: category,
             descriptionOfProduct:descriptionOfProduct,
