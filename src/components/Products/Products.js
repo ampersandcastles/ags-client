@@ -32,7 +32,7 @@ const Products = props => {
     const fetchMuffins = () => {
         let url = 'http://localhost:4004/product/muffins';
 
-        fetch(`${APIURL}/muffins`, {
+        fetch(`${APIURL}/product/muffins`, {
             // credentials: 'include',
             method: 'GET',
             headers: new Headers({
@@ -60,7 +60,7 @@ const Products = props => {
     const fetchBread = () => {
         let url = 'http://localhost:4004/product/bread';
 
-        fetch(`${APIURL}/bread`, {
+        fetch(`${APIURL}/product/bread`, {
             // credentials: 'include',
             method: 'GET',
             headers: new Headers({
@@ -86,7 +86,7 @@ const Products = props => {
     const fetchCookies = () => {
         let url = 'http://localhost:4004/product/cookies';
 
-        fetch(`${APIURL}/cookies`, {
+        fetch(`${APIURL}/product/cookies`, {
             // credentials: 'include',
             method: 'GET',
             headers: new Headers({
@@ -112,7 +112,7 @@ const Products = props => {
     const fetchBagels = () => {
         let url = 'http://localhost:4004/product/bagels';
 
-        fetch(`${APIURL}/bagels`, {
+        fetch(`${APIURL}/product/bagels`, {
             // credentials: 'include',
             method: 'GET',
             headers: new Headers({
@@ -137,7 +137,7 @@ const Products = props => {
     const fetchPastries = () => {
         let url = 'http://localhost:4004/product/pastries';
 
-        fetch(`${APIURL}/pastries`, {
+        fetch(`${APIURL}/product/pastries`, {
             // credentials: 'include',
             method: 'GET',
             headers: new Headers({
