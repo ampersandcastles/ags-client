@@ -13,6 +13,7 @@ import DisplayBread from './Bread';
 import DisplayCookies from './Cookies';
 import DisplayPastries from './Pastries';
 import DisplayBagels from './Bagels';
+import APIURL from '../../helpers/Environment';
 
 
 
@@ -31,7 +32,7 @@ const Products = props => {
     const fetchMuffins = () => {
         let url = 'http://localhost:4004/product/muffins';
 
-        fetch(url, {
+        fetch(`${APIURL}/muffins`, {
             // credentials: 'include',
             method: 'GET',
             headers: new Headers({
@@ -59,7 +60,7 @@ const Products = props => {
     const fetchBread = () => {
         let url = 'http://localhost:4004/product/bread';
 
-        fetch(url, {
+        fetch(`${APIURL}/bread`, {
             // credentials: 'include',
             method: 'GET',
             headers: new Headers({
@@ -85,7 +86,7 @@ const Products = props => {
     const fetchCookies = () => {
         let url = 'http://localhost:4004/product/cookies';
 
-        fetch(url, {
+        fetch(`${APIURL}/cookies`, {
             // credentials: 'include',
             method: 'GET',
             headers: new Headers({
@@ -111,7 +112,7 @@ const Products = props => {
     const fetchBagels = () => {
         let url = 'http://localhost:4004/product/bagels';
 
-        fetch(url, {
+        fetch(`${APIURL}/bagels`, {
             // credentials: 'include',
             method: 'GET',
             headers: new Headers({
@@ -136,7 +137,7 @@ const Products = props => {
     const fetchPastries = () => {
         let url = 'http://localhost:4004/product/pastries';
 
-        fetch(url, {
+        fetch(`${APIURL}/pastries`, {
             // credentials: 'include',
             method: 'GET',
             headers: new Headers({
