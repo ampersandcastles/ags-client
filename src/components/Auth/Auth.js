@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
-import Login from '../Login/Login'
+import Login from '../Login/Login';
+import './Auth.css';
 
 const Auth = (props) => {
     return (

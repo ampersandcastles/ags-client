@@ -3664,14 +3664,40 @@
   optionalDependencies:
     "fsevents" "^1.2.7"
 
+<<<<<<< HEAD
 "chokidar@^3.2.2", "chokidar@^3.4.1":
   "integrity" "sha512-ekGhOnNVPgT77r4K/U3GDhu+FQ2S8TnK/s2KbIGXi0SZWuwkZ2QNyfWdZW+TVfn84DpEP7rLeCt2UI6bJ8GwbQ=="
   "resolved" "https://registry.npmjs.org/chokidar/-/chokidar-3.5.2.tgz"
   "version" "3.5.2"
+=======
+"chokidar@^3.2.2":
+  "integrity" "sha512-9+s+Od+W0VJJzawDma/gvBNQqkTiqYTWLuZoyAsivsI4AaWTCzHG06/TMjsf1cYe9Cb97UCEhjz7HvnPk2p/tw=="
+  "resolved" "https://registry.npmjs.org/chokidar/-/chokidar-3.5.1.tgz"
+  "version" "3.5.1"
+  dependencies:
+    "anymatch" "~3.1.1"
+    "braces" "~3.0.2"
+    "glob-parent" "~5.1.0"
+    "is-binary-path" "~2.1.0"
+    "is-glob" "~4.0.1"
+    "normalize-path" "~3.0.0"
+    "readdirp" "~3.5.0"
+  optionalDependencies:
+    "fsevents" "~2.3.1"
+
+"chokidar@^3.4.1":
+  "integrity" "sha512-9+s+Od+W0VJJzawDma/gvBNQqkTiqYTWLuZoyAsivsI4AaWTCzHG06/TMjsf1cYe9Cb97UCEhjz7HvnPk2p/tw=="
+  "resolved" "https://registry.yarnpkg.com/chokidar/-/chokidar-3.5.1.tgz"
+  "version" "3.5.1"
+>>>>>>> 0f30ac55b677b35b8400f745c5c406c4313898fa
   dependencies:
     "anymatch" "~3.1.2"
     "braces" "~3.0.2"
+<<<<<<< HEAD
     "glob-parent" "~5.1.2"
+=======
+    "glob-parent" "~5.1.0"
+>>>>>>> 0f30ac55b677b35b8400f745c5c406c4313898fa
     "is-binary-path" "~2.1.0"
     "is-glob" "~4.0.1"
     "normalize-path" "~3.0.0"
@@ -5155,6 +5181,10 @@
     "estraverse" "^5.2.0"
     "esutils" "^2.0.2"
     "optionator" "^0.8.1"
+<<<<<<< HEAD
+=======
+  optionalDependencies:
+>>>>>>> 0f30ac55b677b35b8400f745c5c406c4313898fa
     "source-map" "~0.6.1"
 
 "escodegen@~1.2.0":
@@ -7708,7 +7738,11 @@
   "integrity" "sha1-h3Gq4HmbZAdrdmQPygWPnBDjPss="
   "resolved" "https://registry.npmjs.org/jsonfile/-/jsonfile-4.0.0.tgz"
   "version" "4.0.0"
+<<<<<<< HEAD
   dependencies:
+=======
+  optionalDependencies:
+>>>>>>> 0f30ac55b677b35b8400f745c5c406c4313898fa
     "graceful-fs" "^4.1.6"
 
 "jsonfile@^6.0.1":
@@ -7716,7 +7750,6 @@
   "resolved" "https://registry.npmjs.org/jsonfile/-/jsonfile-6.1.0.tgz"
   "version" "6.1.0"
   dependencies:
-    "graceful-fs" "^4.1.6"
     "universalify" "^2.0.0"
 
 "jss-camel-case@^6.0.0":
@@ -10419,7 +10452,11 @@
     "object-assign" "^4.1.1"
     "scheduler" "^0.20.2"
 
+<<<<<<< HEAD
 "react-dom@17.0.1":
+=======
+"react-dom@^0.14.0 || ^15.0.0 || ^16.0.0-beta || ^16.0.0", "react-dom@^15.5.4 || ^16.0.0", "react-dom@^16.3.0", "react-dom@^16.x", "react-dom@0.14.x || ^15.0.0 || ^16.0.0":
+>>>>>>> 0f30ac55b677b35b8400f745c5c406c4313898fa
   "integrity" "sha512-6eV150oJZ9U2t9svnsspTMrWNyHc6chX0KzDeAOXftRa8bNeOKTTfCJ7KorIwenkHd2xqVTBTCZd79yk/lx/Ug=="
   "resolved" "https://registry.npmjs.org/react-dom/-/react-dom-17.0.1.tgz"
   "version" "17.0.1"
@@ -13019,7 +13056,6 @@
   "resolved" "https://registry.npmjs.org/watchpack/-/watchpack-1.7.5.tgz"
   "version" "1.7.5"
   dependencies:
-    "chokidar" "^3.4.1"
     "graceful-fs" "^4.1.2"
     "neo-async" "^2.5.0"
   optionalDependencies:

@@ -6,9 +6,8 @@ const DisplayBagels = (props) => {
     console.log(props);
     return(
         <div>
-              <h1>How deep is this pit of dispair</h1>
+            <h1>How deep is this pit of dispair ;/</h1>
 
-        {console.log('hello')}
             {
                 props.bagels.map((bagels, key) => {
                     console.log(bagels);
